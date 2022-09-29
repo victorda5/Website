@@ -17,62 +17,6 @@
   <meta name="google" value="notranslate">
   <link rel="stylesheet" type="text/css" href="bg-animation.css">
   <script type="text/javascript">
-    var msg =
-      ".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            neukino                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ";
-    var chars = Array.from(msg);
-    let url = "https://spotify-widget.vercel.app/api/now/1123351829";
-    function scrollTitle() {
-      chars.push(chars.shift());
-      document.title = chars.join("");
-      window.setTimeout(scrollTitle, 250);
-    }
-
-    (function () {
-      scrollTitle();
-    })();
-
-    async function fetchText() {
-      let response = await fetch(url);
-
-      //console.log(response.status); // 200
-      //console.log(response.statusText); // OK
-
-      if (response.status === 200) {
-        let data = await response.text();
-        console.log(data);
-        // handle data
-        // console.log(data);
-        if (data == "Nothing is playing now.") {
-          console.log("No Music Playing")
-          var t = document.getElementById("music");
-          var y = document.createTextNode(data);
-          t.innerHTML = "";
-          t.appendChild(y);
-        }
-        else {
-          var t = document.getElementById("music");
-          var y = document.createTextNode(data);
-          t.innerHTML = "";
-          t.appendChild(y);
-          document.getElementById("music").href = "https://www.youtube.com/results?search_query=" + data;
-        }
-      }
-      else {
-        var t = document.getElementById("music");
-        var y = document.createTextNode("API ERROR");
-        t.innerHTML = "";
-        t.appendChild(y);
-      }
-    }
-  </script>
-  <script>fetchText();</script>
-  <script>
-    setInterval(function () {
-      var t = document.getElementById("music");
-      t.innerHTML = "CHECKING...";
-      fetchText();
-      //code goes here that will be run every 10 seconds.    
-    }, 15000);</script>
 
 </head>
 
