@@ -1,0 +1,143 @@
+<html>
+
+<head>
+  <title>Neukino</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta name="theme-color" content="#fff">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="style.css">
+  <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+  <meta property="og:type" content="video.other">
+  <meta property="twitter:player" content="https://www.youtube.com/watch?v=8GfxW3oS63I">
+  <meta property="og:video:type" content="text/html">
+  <meta property="og:video:width" content="0.01">
+  <meta property="og:video:height" content="0.01">
+  <meta name="twitter:image" content="https://i.imgur.com/KjM4AT9.gif">
+  <meta name="google" value="notranslate">
+  <link rel="stylesheet" type="text/css" href="bg-animation.css">
+  <script type="text/javascript">
+    var msg =
+      ".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Killa                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ";
+    var chars = Array.from(msg);
+    let url = "https://spotify-widget.vercel.app/api/now/1123351829";
+    function scrollTitle() {
+      chars.push(chars.shift());
+      document.title = chars.join("");
+      window.setTimeout(scrollTitle, 250);
+    }
+
+    (function () {
+      scrollTitle();
+    })();
+
+    async function fetchText() {
+      let response = await fetch(url);
+
+      //console.log(response.status); // 200
+      //console.log(response.statusText); // OK
+
+      if (response.status === 200) {
+        let data = await response.text();
+        console.log(data);
+        // handle data
+        // console.log(data);
+        if (data == "Nothing is playing now.") {
+          console.log("No Music Playing")
+          var t = document.getElementById("music");
+          var y = document.createTextNode(data);
+          t.innerHTML = "";
+          t.appendChild(y);
+        }
+        else {
+          var t = document.getElementById("music");
+          var y = document.createTextNode(data);
+          t.innerHTML = "";
+          t.appendChild(y);
+          document.getElementById("music").href = "https://www.youtube.com/results?search_query=" + data;
+        }
+      }
+      else {
+        var t = document.getElementById("music");
+        var y = document.createTextNode("API ERROR");
+        t.innerHTML = "";
+        t.appendChild(y);
+      }
+    }
+  </script>
+  <script>fetchText();</script>
+  <script>
+    setInterval(function () {
+      var t = document.getElementById("music");
+      t.innerHTML = "CHECKING...";
+      fetchText();
+      //code goes here that will be run every 10 seconds.    
+    }, 15000);</script>
+
+</head>
+
+<body>
+  <br><br><br>
+  <div id="background" class="bg-animation">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars4"></div>
+    <div id="background" style="opacity: 0.1"></div>
+    <div id="player" style="position: fixed; z-index: -199; width: 100%; background-color: black; opacity: 1"></div>
+  </div>
+
+  <center>
+    <span class="intro_title fast-rainbow">Neukino</span>
+    <br><br><br>
+    <span class="header">find me:</span>
+    <div class="info">
+      <span>
+        <code>twitter:</code>
+        <a href="https://twitter.com/neukin0" target="_blank">@neukin0</a>
+      </span>
+      <code>discord:</code>
+      <script>
+        function copyDiscord() {
+          var copyText = document.getElementById("discord").textContent
+          var dummy = document.createElement("input");
+          // Add it to the document
+          document.body.appendChild(dummy);
+          // Set its ID
+          dummy.setAttribute("id", "dummy_id");
+          // Output the array into it
+          document.getElementById("dummy_id").value = copyText;
+          // Select it
+          dummy.select();
+          // Copy its contents
+          document.execCommand("copy");
+          // Remove it as its not needed anymore
+          document.body.removeChild(dummy);
+          alert("Copied Discord!");
+        }
+      </script>
+      <a id="discord" onclick="copyDiscord()">neukino#0805</a>
+      <span>
+        <code>github:</code>
+        <a href="https://github.com/victorda5" target="_blank">@victorda5</a>
+      </span>
+      <span>
+        <code>steam:</code>
+        <a href="https://steamcommunity.com/id/incinerating" target="_blank">neukino</a>
+      </span>
+
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <br>
+  </center>
+
+  </div>
+  <br>
+
+</html>
