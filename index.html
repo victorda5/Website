@@ -1,82 +1,20 @@
 <html>
-
-<head>
-  <title>Neukino</title>
+ <head>
+  <title>neukino</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no">
   <meta name="theme-color" content="#fff">
   <meta name="robots" content="noindex">
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" type="image/x-icon" href="icon.png" />
+  <meta name="twitter:image" content="https://i.imgur.com/KjM4AT9.gif">
   <meta property="og:type" content="video.other">
-  <meta property="twitter:player" content="https://www.youtube.com/watch?v=8GfxW3oS63I">
   <meta property="og:video:type" content="text/html">
   <meta property="og:video:width" content="0.01">
   <meta property="og:video:height" content="0.01">
-  <meta name="twitter:image" content="https://images.ctfassets.net/rporu91m20dc/3v0ZEjbllVR2oi8SyNlRCT/c3a29f0eaeccc97e44b93d6cdc3f0233/F76-ThePitt_Bnet-CarouselMobile_740x846-01.jpg">
   <meta name="google" value="notranslate">
   <link rel="stylesheet" type="text/css" href="bg-animation.css">
-  <script type="text/javascript">
 
-    var msg =
-      ".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            neukino                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ";
-    var chars = Array.from(msg);
-    let url = "https://spotify-widget.vercel.app/api/now/1123351829";
-    function scrollTitle() {
-      chars.push(chars.shift());
-      document.title = chars.join("");
-      window.setTimeout(scrollTitle, 250);
-    }
-
-    (function () {
-      scrollTitle();
-    })();
-
-    async function fetchText() {
-      let response = await fetch(url);
-
-      //console.log(response.status); // 200
-      //console.log(response.statusText); // OK
-
-      if (response.status === 200) {
-        let data = await response.text();
-        console.log(data);
-        // handle data
-        // console.log(data);
-        if (data == "Nothing is playing now.") {
-          console.log("No Music Playing")
-          var t = document.getElementById("music");
-          var y = document.createTextNode(data);
-          t.innerHTML = "";
-          t.appendChild(y);
-        }
-        else {
-          var t = document.getElementById("music");
-          var y = document.createTextNode(data);
-          t.innerHTML = "";
-          t.appendChild(y);
-          document.getElementById("music").href = "https://www.youtube.com/results?search_query=" + data;
-        }
-      }
-      else {
-        var t = document.getElementById("music");
-        var y = document.createTextNode("API ERROR");
-        t.innerHTML = "";
-        t.appendChild(y);
-      }
-    }
-  </script>
-  <script>fetchText();</script>
-  <script>
-    setInterval(function () {
-      var t = document.getElementById("music");
-      t.innerHTML = "CHECKING...";
-      fetchText();
-      //code goes here that will be run every 10 seconds.    
-    }, 15000);</script>    
-    
-   
-    
 </head>
 
 <body>
@@ -94,10 +32,10 @@
     <br><br><br>
     <span class="header">find me:</span>
     <div class="info">
-        <span>
+      <span>
         <code>steam:</code>
-        <a href="https://steamcommunity.com/id/incinerating" target="_blank">neukino</a>
-      </span>    
+        <a href="https://steamcommunity.com/profiles/76561199065813416" target="_blank">neukino</a>
+      </span>
       <span>
         <code>twitter:</code>
         <a href="https://twitter.com/neukin0" target="_blank">@neukin0</a>
@@ -105,25 +43,7 @@
       <span>
         <code>discord:</code>
         <a href="https://discordapp.com/users/313348632512561152" target="_blank">neukino#0805</a>
-      </span>      
-      <span>
-        <code>Fallout 76</code>
-        <a href="/tradelist" target="_blank">Tradelist</a>
       </span>
-
-
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-
-    <br>
   </center>
-
-  </div>
-  <br>
-
 </html>
