@@ -7,10 +7,8 @@ body {
     text-size-adjust: 100%;
 }
 
-a,
-a:visited {
+a {
     color: rgb(0, 255, 0);
-    #text-shadow: 1px 1px 8px white;
     text-decoration: none;
     animation: poopy 0.5s linear 0s;
 }
@@ -46,7 +44,6 @@ a:hover {
  100% { opacity: 1; }
 }
 
-
 @keyframes flash {
   from {
     opacity: .0;
@@ -65,31 +62,6 @@ a:hover {
   }
 }
 
-
-
-
-
-
-input,
-input:focus {
-    border: none;
-    color: white;
-    background: transparent;
-    font-family: monospace;
-    font-size: 14px;
-    outline: none;
-}
-
- ::selection {
-    background: rgba(255, 0, 0, 0.3);
-    padding: 3px;
-}
-
-hr {
-    width: 15%;
-    margin-left: 0px;
-}
-
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -99,7 +71,6 @@ hr {
     }
 }
 
-
 .fast-rainbow-no-change {
   animation: colorRotate 1s linear 0s infinite;
 }
@@ -107,7 +78,7 @@ hr {
 code,
 .header {
     color: rgb(255, 255, 255);
-    #text-shadow: 1px 1px 8px black;
+    text-shadow: 1px 1px 8px black;
     user-select: none;
 }
 
@@ -122,46 +93,9 @@ code,
     color: white;
 }
 
-.info {
-    color: white;
-    z-index: 1500;
-    padding-left: 10px;
-    margin-left: 10px;
-    /* removes ugly white border on left side xoxo
-    border-left: 1px solid rgba(255, 255, 255, .4);
-    */
-}
-
 .info span {
     display: block;
 }
-
-.perma-banned {
-    font-weight: bold;
-    color: red;
-}
-
-.temp-banned {
-    font-weight: bold;
-    color: orange;
-}
-
-.not-banned {
-    font-weight: bold;
-    color: rgba(0, 255, 0, 255);
-    
-    animation-name: fadeAway;
-    animation-duration: 30s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-delay: 0s;
-}
-
-.not-banned2 {
-    font-weight: bold;
-    color: rgba(0, 255, 0, 255);
-}
-
 
 @keyframes fadeAway {
     0% {
@@ -182,6 +116,7 @@ code,
     font-family: monospace;
     letter-spacing: 5px;
 }
+
 .rainbow_text_animated {
     background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
     -webkit-background-clip: text;
@@ -201,10 +136,8 @@ code,
     }
 }
 
-
 .fast-rainbow {
   text-align: center;
-  /* text-decoration: underline; */
   font-size: 32px;
   font-family: monospace;
   letter-spacing: 5px;
@@ -229,11 +162,6 @@ code,
   }
 }
 
-
-
-
-
-
 #background,
 #background-cover {
     margin: auto;
@@ -246,7 +174,6 @@ code,
 
 #background {
     background: rgba(0,0,0,255);
-    /*background: no-repeat center center fixed url('fucking_leechers.gif');*/
     z-index: -5;
     background-size: cover;
     image-rendering: pixelated;
