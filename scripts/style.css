@@ -162,36 +162,6 @@ code,
   }
 }
 
-#background,
-#background-cover {
-    margin: auto;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-#background {
-    background: rgba(0,0,0,255);
-    z-index: -5;
-    background-size: cover;
-    image-rendering: pixelated;
-    image-rendering: crisp-edges;
-    image-rendering: optimize-contrast;
-    image-rendering: optimizeSpeed;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: -o-crisp-edges;
-}
-
-#background-cover {
-    background-color: #1d1f21;
-    opacity: 0.8;
-    z-index: -1;
-}
-
-
-.foto{
+.image{
 position: relative;
-
 }
