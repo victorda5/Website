@@ -2,241 +2,232 @@
 <html>
 
 <head>
-  <title>neukino</title>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#fff">
-  <meta name="robots" content="noindex">
-  <link rel="stylesheet" href="scripts/style.css">
-  <link rel="shortcut icon" type="image/x-icon" href="images/icon.png" />
-  <meta name="twitter:image" content="https://i.imgur.com/KjM4AT9.gif">
-  <meta property="og:type" content="video.other">
-  <meta property="og:video:type" content="text/html">
-  <meta property="og:video:width" content="0.01">
-  <meta property="og:video:height" content="0.01">
-  <meta name="google" value="notranslate">
-  <link rel="stylesheet" type="text/css" href="scripts/animation.js">
+    <title>neukino</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fff">
+    <meta name="robots" content="noindex">
+    <meta name="twitter:image" content="https://i.imgur.com/KjM4AT9.gif">
+    <meta property="og:type" content="video.other">
+    <meta property="og:video:type" content="text/html">
+    <meta property="og:video:width" content="0.01">
+    <meta property="og:video:height" content="0.01">
+    <meta name="google" value="notranslate">
+    <link rel="stylesheet" href="scripts/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/icon.png" />
 </head>
 
 <body>
-  <br><br><br><span id="span"></span>
-  
-  <!--Fondo estrellas-->
-  <div id="background" class="bg-animation">
-    <div id="background" style="opacity: 0.1"></div>
-    <div id="player" style="position: fixed; z-index: -199; width: 100%; background-color: black; opacity: 1"></div>
-  </div>
-  <!--Fondo estrellas-->
-  
-<div id="particulas"></div>
-<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.3.4/tsparticles.bundle.min.js"></script>"></script>
+    <br><br><br>
+    <!--Imported from: https://particles.js.org/samples/index.html#amongUs-->
+    <div id="particles"></div>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.3.4/tsparticles.bundle.min.js"></script>
 
-<script type="text/javascript">
-tsParticles.load("tsparticles", {
-    "fullScreen": {
-        "zIndex": -1
-    },
-    "particles": {
-        "groups": {
-            "z5000": {
+    <script type="text/javascript">
+        tsParticles.load("tsparticles", {
+            "fullScreen": {
+                "zIndex": -1
+            },
+            "particles": {
+                "groups": {
+                    "z5000": {
+                        "number": {
+                            "value": 70
+                        },
+                        "zIndex": {
+                            "value": 50
+                        }
+                    },
+                    "z7500": {
+                        "number": {
+                            "value": 30
+                        },
+                        "zIndex": {
+                            "value": 75
+                        }
+                    },
+                    "z2500": {
+                        "number": {
+                            "value": 50
+                        },
+                        "zIndex": {
+                            "value": 25
+                        }
+                    },
+                    "z1000": {
+                        "number": {
+                            "value": 40
+                        },
+                        "zIndex": {
+                            "value": 10
+                        }
+                    }
+                },
                 "number": {
-                    "value": 70
+                    "value": 200,
+                    "density": {
+                        "enable": false,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#fff",
+                    "animation": {
+                        "enable": false,
+                        "speed": 20,
+                        "sync": true
+                    }
+                },
+                "shape": {
+                    "type": "circle"
+                },
+                "opacity": {
+                    "value": 1,
+                    "random": false,
+                    "animation": {
+                        "enable": false,
+                        "speed": 3,
+                        "minimumValue": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3
+                },
+                "links": {
+                    "enable": false,
+                    "distance": 100,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "angle": {
+                        "value": 10,
+                        "offset": 0
+                    },
+                    "enable": true,
+                    "speed": 5,
+                    "direction": "right",
+                    "random": false,
+                    "straight": false,
+                    "outModes": {
+                        "default": "out"
+                    },
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                },
+                "wobble": {
+                    "enable": false
+                },
+                "tilt": {
+                    "enable": false
+                },
+                "roll": {
+                    "enable": false
                 },
                 "zIndex": {
-                    "value": 50
+                    "value": 5,
+                    "opacityRate": 0.5
                 }
             },
-            "z7500": {
-                "number": {
-                    "value": 30
+            "detectRetina": true,
+            "background": {
+                "color": "#000000",
+                "image": "",
+                "position": "50% 50%",
+                "repeat": "no-repeat",
+                "size": "cover"
+            },
+            "emitters": {
+                "position": {
+                    "y": 55,
+                    "x": -5
                 },
-                "zIndex": {
-                    "value": 75
-                }
-            },
-            "z2500": {
-                "number": {
-                    "value": 50
+                "rate": {
+                    "delay": 7,
+                    "quantity": 1
                 },
-                "zIndex": {
-                    "value": 25
-                }
-            },
-            "z1000": {
-                "number": {
-                    "value": 40
+                "size": {
+                    "width": 0,
+                    "height": 0
                 },
-                "zIndex": {
-                    "value": 10
-                }
-            }
-        },
-        "number": {
-            "value": 200,
-            "density": {
-                "enable": false,
-                "value_area": 800
-            }
-        },
-        "color": {
-            "value": "#fff",
-            "animation": {
-                "enable": false,
-                "speed": 20,
-                "sync": true
-            }
-        },
-        "shape": {
-            "type": "circle"
-        },
-        "opacity": {
-            "value": 1,
-            "random": false,
-            "animation": {
-                "enable": false,
-                "speed": 3,
-                "minimumValue": 0.1,
-                "sync": false
-            }
-        },
-        "size": {
-            "value": 3
-        },
-        "links": {
-            "enable": false,
-            "distance": 100,
-            "color": "#ffffff",
-            "opacity": 0.4,
-            "width": 1
-        },
-        "move": {
-            "angle": {
-                "value": 10,
-                "offset": 0
-            },
-            "enable": true,
-            "speed": 5,
-            "direction": "right",
-            "random": false,
-            "straight": false,
-            "outModes": {
-                "default": "out"
-            },
-            "attract": {
-                "enable": false,
-                "rotateX": 600,
-                "rotateY": 1200
-            }
-        },
-        "wobble": {
-            "enable": false
-        },
-        "tilt": {
-            "enable": false
-        },
-        "roll": {
-            "enable": false
-        },
-        "zIndex": {
-            "value": 5,
-            "opacityRate": 0.5
-        }
-    },
-    "detectRetina": true,
-    "background": {
-        "color": "#000000",
-        "image": "",
-        "position": "50% 50%",
-        "repeat": "no-repeat",
-        "size": "cover"
-    },
-    "emitters": {
-        "position": {
-            "y": 55,
-            "x": -5
-        },
-        "rate": {
-            "delay": 7,
-            "quantity": 1
-        },
-        "size": {
-            "width": 0,
-            "height": 0
-        },
-        "particles": {
-            "shape": {
-                "type": "images",
-                "options": {
-                    "images": {
-                        "src": "https://particles.js.org/images/cyan_amongus.png",
-                        "width": 500,
-                        "height": 634
+                "particles": {
+                    "shape": {
+                        "type": "images",
+                        "options": {
+                            "images": {
+                                "src": "https://particles.js.org/images/cyan_amongus.png",
+                                "width": 500,
+                                "height": 634
+                            }
+                        }
+                    },
+                    "size": {
+                        "value": 40
+                    },
+                    "move": {
+                        "speed": 10,
+                        "outModes": {
+                            "default": "none",
+                            "right": "destroy"
+                        },
+                        "straight": true
+                    },
+                    "zIndex": {
+                        "value": 0
+                    },
+                    "rotate": {
+                        "value": {
+                            "min": 0,
+                            "max": 360
+                        },
+                        "animation": {
+                            "enable": true,
+                            "speed": 10,
+                            "sync": true
+                        }
                     }
                 }
-            },
-            "size": {
-                "value": 40
-            },
-            "move": {
-                "speed": 10,
-                "outModes": {
-                    "default": "none",
-                    "right": "destroy"
-                },
-                "straight": true
-            },
-            "zIndex": {
-                "value": 0
-            },
-            "rotate": {
-                "value": {
-                    "min": 0,
-                    "max": 360
-                },
-                "animation": {
-                    "enable": true,
-                    "speed": 10,
-                    "sync": true
-                }
             }
-        }
-    }
-})
+        })
+    </script>
 
-</script>
-
-  <center>
-    <span class="intro_title fast-rainbow">Neukino</span>
-    <br><br><br>
-    <span class="header">find me:</span>
-    <div class="info">
-      <span>
-        <code>steam:</code>
-        <a href="https://steamcommunity.com/profiles/76561199065813416" target="_blank">neukino</a>
-      </span>
-      <span>
-        <code>twitter:</code>
-        <a href="https://twitter.com/neukin0" target="_blank">@neukin0</a>
-      </span>
-      <span>
-        <code>discord:</code>
-        <a href="https://discordapp.com/users/313348632512561152" target="_blank">neukino#0805</a>
-      </span>
-      <br>
-      <img src="images/cat.jpg" class="foto" alt="bleehh :P cat" style="width:300px;height:300px">
-      <span>
-        <br>
-        <audio controls>
-          <source id="audio-1" src="sounds/alien.mp3" type="audio/mp3">
-        </audio>
-      </span>
-      <br>
-      <span>
-        <code>Song:</code>
-        <a href="https://www.youtube.com/watch?v=VQvmH9Ad6ME" target="_blank">Chuki Beats - "ALIEN"</a>
-      </span>
+    <center>
+        <span class="intro_title fast-rainbow">Neukino</span>
+        <br><br><br>
+        <span class="header">find me:</span>
+        <div class="info">
+            <span>
+                <code>steam:</code>
+                <a href="https://steamcommunity.com/profiles/76561199065813416" target="_blank">neukino</a>
+            </span>
+            <span>
+                <code>twitter:</code>
+                <a href="https://twitter.com/neukin0" target="_blank">@neukin0</a>
+            </span>
+            <span>
+                <code>discord:</code>
+                <a href="https://discordapp.com/users/313348632512561152" target="_blank">neukino#0805</a>
+            </span>
+            <br>
+            <img src="images/cat.jpg" class="image" alt="bleehh :P cat" style="width:300px;height:300px">
+            <span>
+                <br>
+                <audio controls>
+                    <source id="audio-1" src="sounds/alien.mp3" type="audio/mp3">
+                </audio>
+            </span>
+            <br>
+            <span>
+                <code>Song:</code>
+                <a href="https://www.youtube.com/watch?v=VQvmH9Ad6ME" target="_blank">Chuki Beats - "ALIEN"</a>
+            </center>
+        </div>
     </div>
-  </center>
 
 </html>
