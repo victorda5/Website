@@ -34,17 +34,29 @@ span{
 }
 
 button{
-  width:200px;
-  height:50px;
-  background: transparent;
+  background: rgba(0,0,0,0.5);
   border: 3px solid white;
   cursor: pointer;
   font-size: 15px;
   color: white;
+  text-align: center;
+  align-items:center;
+  position:relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 400px;
 }
 
-.discord{
-  width:410px;
+.dual-button{
+  padding: 10px 60px;
+}
+
+.discord-button{
+  padding: 10px 85px;
+}
+
+button:hover{
+  border: 3px solid rgb(0,140,255);
 }
 
 .logo{
