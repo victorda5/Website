@@ -1,74 +1,70 @@
 body {
-    margin: 40px;
-    margin-top: 50px;
-    font-family: monospace;
-    font-size: 14px;
-    line-height: 20px;
-    text-size-adjust: 100%;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 20px;
+  text-size-adjust: 100%;
+  margin: 0px;
+  padding: 0px;
 }
 
 a {
-    color: rgb(0, 255, 0);
-    text-decoration: none;
-    animation: poopy 0.5s linear 0s;
+  color: rgb(0, 255, 0);
+  text-decoration: none;
+  animation: poopy 0.5s linear 0s;
+}
+
+a:hover {
+  font-weight: bolder;
+  transition: 130ms linear;
+  opacity: 1;
+  -webkit-animation: flash 0.3s infinite;
+  animation: flash 0.7s linear 0s infinite;
 }
 
 @keyframes poopy {
   from {
-    color: rgba(0,255,0,255);
+    color: rgba(0, 255, 0, 255);
   }
+
   50% {
-    color: rgba(255,255,255,255);
+    color: rgba(255, 255, 255, 255);
   }
+
   100% {
-    opacity: rgba(0,255,0,255);
+    opacity: rgba(0, 255, 0, 255);
   }
-}
-
-a:hover {
-    font-weight: bolder;
-    transition: 130ms linear;
-    opacity: 1;
-    -webkit-animation: flash 0.3s infinite;
-    animation: flash 0.7s linear 0s infinite;
-}
-
-.flash:hover {
- opacity: 1;
- -webkit-animation: flash 0.3s infinite;
- animation: flash 0.3s linear 0s infinite;
 }
 
 @-webkit-keyframes flash {
- 0% { opacity: .3; }
- 100% { opacity: 1; }
+  0% {
+    opacity: .3;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes flash {
   from {
     opacity: .0;
   }
+
   10% {
     opacity: .1;
   }
+
   50% {
     opacity: .5;
   }
+
   75% {
     opacity: .75;
   }
+
   100% {
     opacity: 1;
   }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 
 .fast-rainbow-no-change {
@@ -77,63 +73,56 @@ a:hover {
 
 code,
 .header {
-    color: rgb(255, 255, 255);
-    text-shadow: 1px 1px 8px black;
-    user-select: none;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 8px black;
+  user-select: none;
 }
 
 .header {
-    font-weight: bold;
-    text-decoration-line: underline;
+  font-weight: bold;
+  text-decoration-line: underline;
+  margin-top: 40px;
 }
 
 .intro_title {
-    font-weight: bold;
-    font-size: 20px;
-    color: white;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  cursor: default;
 }
 
 .info span {
-    display: block;
-}
-
-@keyframes fadeAway {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 0;
-    }
+  display: block;
 }
 
 .rainbow {
-    text-align: center;
-    text-decoration: underline;
-    font-size: 32px;
-    font-family: monospace;
-    letter-spacing: 5px;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 32px;
+  font-family: monospace;
+  letter-spacing: 5px;
 }
 
 .rainbow_text_animated {
-    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: rainbow_animation 3s ease-in-out infinite;
-    background-size: 400% 100%;
+  background: linear-gradient(to right, #6666ff, #0099ff, #00ff00, #ff3399, #6666ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow_animation 3s ease-in-out infinite;
+  background-size: 400% 100%;
+  margin-bottom: 300px;
 }
 
 @keyframes rainbow_animation {
-    0%,100% {
-        background-position: 0 0;
-    }
 
-    50% {
-        background-position: 100% 0;
-    }
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 100% 0;
+  }
 }
 
 .fast-rainbow {
@@ -148,20 +137,48 @@ code,
   from {
     color: #6666ff;
   }
+
   10% {
     color: #0099ff;
   }
+
   50% {
     color: #00ff00;
   }
+
   75% {
     color: #ff3399;
   }
+
   100% {
     color: #6666ff;
   }
 }
 
-.image{
-position: relative;
+.rgbline {
+  color: red;
+  height: 8px;
+  background: repeating-linear-gradient(90deg, #1e5799, #f300ff, #e0ff00, #f300ff, #1e5799);
+  background-size: 400% 100%;
+  animation: rainbowline 3s linear infinite;
+  margin-bottom: 100px;
+}
+
+@keyframes rainbowline {
+  0% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: -33% 50%
+  }
+}
+
+.foto {
+  background: url(../images/cat.jpg);
+  width: 300px;
+  height: 300px;
+  border: 3px solid #0099ff;
+  background-size: cover;
+  margin-top: 16px;
 }
